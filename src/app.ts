@@ -27,7 +27,6 @@ class App {
     this.app.use(express.json());
     this.app.use(express.urlencoded({ extended: false }));
     this.app.use(cookieParser());
-    this.app.use(express.static(path.join(__dirname, 'public/images')));
     require('./services/worker.service');
     require('./database/init.mongoDb');
     require('./database/init.redisDb');
